@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+struct DonThuc
+{
+  float a;
+  int n;
+}
+typedef struct DonThuc DONTHUC;
+void NhapDonThuc (DONTHUC&);
+void XuatDonThuc (DONTHUC):
+void NhapDonThuc(DONTHUC&dt)
+{
+float temp;
+printf("\nNhap he so:");
+scanf("%d",&dt.n);
+}
+void XuatDonThuc(DONTHUC dt)
+{
+printf("%d", dt.a,dt.n);
+}
+int main ()
+{
+DONTHUC dt;
+NhapDonThuc(dt);
+NhapDonThuc(dt);
+getch();
+return 0;
+}
+
+
