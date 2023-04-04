@@ -7,22 +7,19 @@ void swap(int* a, int* b)
     *a = *b;
     *b = temp;
 }
-
-// Hàm chọn phần tử chốt và sắp xếp các phần tử
-// nhỏ hơn phần tử chốt sang bên trái, lớn hơn phần tử chốt sang bên phải
 int partition(int arr[], int low, int high)
 {
-    int pivot = arr[high];    // Chọn phần tử chốt là phần tử cuối cùng
-    int i = (low - 1);        // Index của phần tử nhỏ nhất
+    int pivot = arr[high];   
+    int i = (low - 1);      
     for (int j = low; j <= high - 1; j++)
     {
-        // Nếu phần tử hiện tại nhỏ hơn phần tử chốt
+ 
         if (arr[j] < pivot)
         {
-                      i++;    // Tăng index phần tử nhỏ nhất lên một đơn vị
-            swap(&arr[i], &arr[j]);    // Đổi chỗ phần tử hiện tại với phần tử nhỏ nhất
+                      i++;   
+            swap(&arr[i], &arr[j]);   
         }
     }
-    swap(&arr[i + 1], &arr[high]);    // Đổi chỗ phần tử chốt với phần tử kế tiếp của phần tử nhỏ nhất
-    return (i + 1);    // Trả về vị trí của phần tử chốt
+    swap(&arr[i + 1], &arr[high]);   
+    return (i + 1);   
 }
